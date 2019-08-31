@@ -21,7 +21,7 @@ function App() {
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
-            name here
+            Insert  the form here yes 
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
