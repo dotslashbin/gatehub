@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 
+/** COMPONENTS */
+import GitSearcher from './components/Gitsearcher'
+
+
 const useStyles = makeStyles(theme => ({
 	root: {
 		flexGrow: 1,
@@ -12,6 +16,15 @@ const useStyles = makeStyles(theme => ({
 		textAlign: 'center',
 		color: theme.palette.text.secondary,
 	},
+	// textField: {
+	// 	marginLeft: theme.spacing(1),
+	// 	marginRight: theme.spacing(1),
+	// 	width: 200,
+	// }, 
+	// container: {
+	// 	display: 'flex', 
+	// 	flexWrap: true
+	// }
 }))
 
 function App() {
@@ -21,7 +34,7 @@ function App() {
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
-            Insert  the form here yes 
+						<GitSearcher />
 					</Paper>
 				</Grid>
 				<Grid item xs={12} sm={6}>
