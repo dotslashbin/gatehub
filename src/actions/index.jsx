@@ -4,8 +4,8 @@ import {
 
 import axios from 'axios'
 
-export const searchUser = (id) => {
-	axios.get(`${API_URL}${id}/repos`)
+export const searchUserData = (id, type) => {
+	axios.get(`${API_URL}${id}/${type}`)
 	.then((result) => {
 		console.log(result)
 	})
