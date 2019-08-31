@@ -1,0 +1,11 @@
+version: "2"
+services:
+    gatehub:
+        build: .
+        image: gatehub_image
+        restart: always
+        ports:
+            - "3000:3000"
+        volumes:
+            - .:/usr/src/app/
+            - /gatehub/node_modules
