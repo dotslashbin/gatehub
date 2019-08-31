@@ -16,15 +16,6 @@ const useStyles = makeStyles(theme => ({
 		textAlign: 'center',
 		color: theme.palette.text.secondary,
 	},
-	// textField: {
-	// 	marginLeft: theme.spacing(1),
-	// 	marginRight: theme.spacing(1),
-	// 	width: 200,
-	// }, 
-	// container: {
-	// 	display: 'flex', 
-	// 	flexWrap: true
-	// }
 }))
 
 function App() {
@@ -34,6 +25,7 @@ function App() {
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
+						<p>Search for a Git user: (Example: 'freeCodeCamp')</p>
 						<GitSearcher />
 					</Paper>
 				</Grid>
