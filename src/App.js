@@ -2,12 +2,14 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-// import { Provider } from 'react-redux'
-// import store from 'Store'
+import { Provider } from 'react-redux'
+import * as serviceWorker from './serviceWorker'
+
 
 /** COMPONENTS */
 import GitSearcher from './components/Gitsearcher'
 
+import store from './Store'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -23,25 +25,28 @@ const useStyles = makeStyles(theme => ({
 function App() {
 	const classes = useStyles()
 	return (
-		// <Provider store={store}>
+		<Provider store={store}>
 			<div className={classes.root}>
-			<Grid container spacing={3}>
-				<Grid item xs={12}>
-					<Paper className={classes.paper}>
-						<p>Search for a Git user: (Example: 'freeCodeCamp')</p>
-						<GitSearcher />
-					</Paper>
+				<Grid container spacing={3}>
+					<Grid item xs={12}>
+						<Paper className={classes.paper}>
+							<p>Search for a Git user: (Example: 'freeCodeCamp')</p>
+							<GitSearcher />
+						</Paper>
+					</Grid>
+					<Grid item xs={12} sm={6}>
+						<Paper className={classes.paper}>xs=12 sm=6</Paper>
+					</Grid>
+					<Grid item xs={12} sm={6}>
+						<Paper className={classes.paper}>xs=12 sm=6</Paper>
+					</Grid>
 				</Grid>
-				<Grid item xs={12} sm={6}>
-					<Paper className={classes.paper}>xs=12 sm=6</Paper>
-				</Grid>
-				<Grid item xs={12} sm={6}>
-					<Paper className={classes.paper}>xs=12 sm=6</Paper>
-				</Grid>
-			</Grid>
-		</div>
-		// </Provider>
+			</div>
+		</Provider>
 	)
 }
+
+serviceWorker.unregister()
+
 
 export default App
