@@ -1,12 +1,13 @@
-import { all, call, put , takeEvery } from 'redux-saga/effects';
+import { all, put , takeEvery } from 'redux-saga/effects';
 
-import { TESTING } from '../common'
+import { DISPLAY_GROUPS, DISPLAY_REPOS, SEARCH } from '../common'
 
-function* runTesting() {
+function* makeAPICall() {
 	try {
-		const payload = call(getUserRepos)
-		console.log(`FINALLY THIS IS RUNNING ...`)
-		yield put({ type: 'DISPLAY_REPOS', payload })
+		
+		console.log('YOU ARE HERE ... ', DISPLAY_GROUPS, DISPLAY_REPOS)
+
+		yield put({ type: 'DISPLAY_REPOS'})
 	} catch (error) {
 		yield put({ type: 'API_ERROR', payload: error })
 	}
@@ -14,11 +15,7 @@ function* runTesting() {
 
 function* actionWatcher() {
 	console.log(`ACTION WATCHER IS WORKING  `)
-	yield takeEvery(TESTING, runTesting)
-}
-
-function getUserRepos() {
-	return "repose erturned here"
+	yield takeEvery(SEARCH, makeAPICall)
 }
 
 export default function* rootSaga() {

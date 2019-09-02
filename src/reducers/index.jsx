@@ -1,13 +1,13 @@
-import { SEARCH, TESTING } from '../common/'
+import { DISPLAY_GROUPS, DISPLAY_REPOS } from '../common/'
 
 const initialState = {}
 
 const reducer = (state = initialState, action) => {
 	switch(action.type) {
-		case SEARCH:
-				return { ...state, user_id: action.user_id }
-		case TESTING: 
-				return { ...state, testing: 'foo' }
+		case DISPLAY_GROUPS:
+			return { ...state, groups: action.payload.groups }
+		case DISPLAY_REPOS:
+			return { ...state, repos: action.payload.repos }
 		default:
 			return state;
 	}
