@@ -1,5 +1,18 @@
+import axios from 'axios'
+import { API_URL } from '../common/config'
+
 export const profileFunctions = {
-	getUserRepos: () => {
-		return "repos na ni"
+	getUserRepos: (userid) => {
+		return axios.get(`${API_URL}${userid}/repos`)
+			.then((result) => {
+				if (result.data) {
+					return result.data
+				}
+				
+				return []
+			})
+			.catch((error) => {
+				console.error(`THERE WAS AN ERROR CALLING API FOR REPOS`, error)
+			})
 	}
 }
