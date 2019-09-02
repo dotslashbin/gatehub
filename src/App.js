@@ -2,14 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker'
-
 
 /** COMPONENTS */
 import GitSearcher from './components/Gitsearcher'
-
-import store from './Store'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -25,7 +21,6 @@ const useStyles = makeStyles(theme => ({
 function App() {
 	const classes = useStyles()
 	return (
-		<Provider store={store}>
 			<div className={classes.root}>
 				<Grid container spacing={3}>
 					<Grid item xs={12}>
@@ -42,7 +37,6 @@ function App() {
 					</Grid>
 				</Grid>
 			</div>
-		</Provider>
 	)
 }
 
