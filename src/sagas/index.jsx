@@ -1,18 +1,16 @@
 import { all, put , takeEvery } from 'redux-saga/effects';
-import {  SEARCH } from '../common'
 import { profileFunctions } from '../modules/profiles'
-import ReportDispatcher from 'jest-jasmine2/build/jasmine/ReportDispatcher';
-// import { DISPLAY_GROUPS, DISPLAY_REPOS, SEARCH } from '../common'
+import { API_ERRORS, DISPLAY_REPOS, SEARCH } from '../common/actionTypes'
 
 function* makeAPICall(action) {
 	try {
-		profileFunctions.getUserRepos(action.payload.userid)
-		.then((testing) => {
-			console.log(testing)
-		})
-		yield put({ type: 'DISPLAY_REPOS'})
+		const repos = yield profileFunctions.getUserRepos(action.payload.userid)
+		.then(result => result)
+		yield put({ type: DISPLAY_REPOS, payload: repos })
+		
 	} catch (error) {
-		yield put({ type: 'API_ERROR', payload: error })
+		console.log(`API ERROR: `, error)
+		yield put({ type: API_ERRORS, payload: error })
 	}
 }
 
