@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
 		case DISPLAY_GROUPS:
 			return { ...state, groups: action.payload }
 		case DISPLAY_REPOS: 
-			return { ...state, repos: action.payloadS }
+			return { ...state, repos: action.payload }
 		default:
 			return state;
 	}
