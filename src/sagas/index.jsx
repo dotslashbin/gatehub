@@ -1,11 +1,13 @@
 import { all, put , takeEvery } from 'redux-saga/effects';
+import {  SEARCH } from '../common'
+import { profileFunctions } from '../modules/profiles'
+// import { DISPLAY_GROUPS, DISPLAY_REPOS, SEARCH } from '../common'
 
-import { DISPLAY_GROUPS, DISPLAY_REPOS, SEARCH } from '../common'
-
-function* makeAPICall() {
+function* makeAPICall(action) {
 	try {
 		
-		console.log('YOU ARE HERE ... ', DISPLAY_GROUPS, DISPLAY_REPOS)
+		const repos = profileFunctions.getUserRepos(action.payload.userid)
+		console.log(repos)
 
 		yield put({ type: 'DISPLAY_REPOS'})
 	} catch (error) {
@@ -17,6 +19,10 @@ function* actionWatcher() {
 	console.log(`ACTION WATCHER IS WORKING  `)
 	yield takeEvery(SEARCH, makeAPICall)
 }
+
+// function getUserRepos(id) {
+	
+// }
 
 export default function* rootSaga() {
 	yield all([
