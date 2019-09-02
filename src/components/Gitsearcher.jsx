@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { triggerAction } from '../actions'
+import { searchUserData } from '../actions'
 
-let testButton = ({ triggerAction }) => (
-	<button onClick={ triggerAction }>Click this</button>
+let searchButton = ({ searchUserData }) => (
+	<button onClick={ () => searchUserData('freeCodeCamp') }>Search</button>
 )
 
 const mapDispatchToProps = {
-	triggerAction: triggerAction
+	searchUserData: searchUserData
 }
 
-testButton = connect(null, mapDispatchToProps)(testButton)
+searchButton = connect(null, mapDispatchToProps)(searchButton)
 
-export default testButton
+export default searchButton
