@@ -58,7 +58,7 @@ let RepoList = ({repos}) => {
 
 			)}
 		</div> :
-		<h3>Nothing here yet</h3>
+		<p>Click search to show repos</p>
 	)
 }
 

@@ -32,13 +32,13 @@ function App() {
 					</Grid>
 					<Grid item xs={12} sm={6}>
 						<Paper className={classes.paper}>
-							<h2>Repos</h2>
+							<h2>List of repositories</h2>
 							<RepoList />
 						</Paper>
 					</Grid>
 					<Grid item xs={12} sm={6}>
 						<Paper className={classes.paper}>
-							<h2>Groups</h2>
+							<h2>List of groups</h2>
 						</Paper>
 					</Grid>
 				</Grid>
