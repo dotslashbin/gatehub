@@ -19,7 +19,7 @@ export default function SearchField() {
 	const classes = useStyles()
 
 	const [values, setValues] = useState({
-		search_string: 'something here'
+		search_string: ''
 	})
 
 	const handleChange = search_string => event => {
@@ -30,7 +30,7 @@ export default function SearchField() {
 		<form className={classes.container} autoComplete="off" noValidate>
 			<TextField 
 				id="standard-name"
-				label=""
+				label="Enter user ID here"
 				className={classes.textField}
 				value={values.search_string}
 				onChange={handleChange('search_string')}
