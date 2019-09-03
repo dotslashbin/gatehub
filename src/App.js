@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker'
 
 /** COMPONENTS */
 import RepoList from './components/Repolister'
-import SearchField from './components/searchField'
+import SearchField from './components/SearchField'
 
 const useStyles = makeStyles(theme => ({
 	root: {

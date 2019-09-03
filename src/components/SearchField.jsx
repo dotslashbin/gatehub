@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import GitSearcher from './Gitsearcher'
+import SearchButton from './SearchButton'
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -36,7 +36,7 @@ export default function SearchField() {
 				onChange={handleChange('search_string')}
 				margin="normal"
 			/>
-			<GitSearcher searchString={values.search_string} />
+			<SearchButton searchString={values.search_string} />
 		</form>
 	)
 }
