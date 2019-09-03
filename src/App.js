@@ -49,7 +49,7 @@ function App() {
 					</Grid>
 					<Grid item xs={12} sm={6}>
 						<Paper className={classes.paper}>
-							<h2>List of groups</h2>
+							<h2>List of organizations</h2>
 						</Paper>
 					</Grid>
 				</Grid>
