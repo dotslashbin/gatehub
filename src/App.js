@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker'
 
 /** COMPONENTS */
 import GitSearcher from './components/Gitsearcher'
+import RepoList from './components/Repolister'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -30,10 +31,15 @@ function App() {
 						</Paper>
 					</Grid>
 					<Grid item xs={12} sm={6}>
-						<Paper className={classes.paper}>xs=12 sm=6</Paper>
+						<Paper className={classes.paper}>
+							<h2>Repos</h2>
+							<RepoList />
+						</Paper>
 					</Grid>
 					<Grid item xs={12} sm={6}>
-						<Paper className={classes.paper}>xs=12 sm=6</Paper>
+						<Paper className={classes.paper}>
+							<h2>Groups</h2>
+						</Paper>
 					</Grid>
 				</Grid>
 			</div>
