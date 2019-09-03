@@ -11,3 +11,10 @@ Redux-Saga - middleware
 ESLint - Development tool 
 Lodash - array manipulaton
 Enzyme - for unit and integratoin testing
+
+# Installation guide ( Local )
+Prerequisite: NodeJs ( http://www.nodejs.org ) <br />
+1. Clone the repo <br />
+2. Go into the directory
+3. If you are using npm,run "npm start. If you are using yarn, run "yarn start" 
+4. If you want to run the test, simply run "yarn run test" , or "npm run test" 
