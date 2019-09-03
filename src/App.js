@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker'
 
 /** COMPONENTS */
 import RepoList from './components/Repolister'
+import OrgList from './components/OrgLister'
 import SearchField from './components/SearchField'
 
 const useStyles = makeStyles(theme => ({
@@ -50,6 +51,7 @@ function App() {
 					<Grid item xs={12} sm={6}>
 						<Paper className={classes.paper}>
 							<h2>List of organizations</h2>
+							<OrgList />
 						</Paper>
 					</Grid>
 				</Grid>
