@@ -5,8 +5,8 @@ import Grid from '@material-ui/core/Grid'
 import * as serviceWorker from './serviceWorker'
 
 /** COMPONENTS */
-import GitSearcher from './components/Gitsearcher'
 import RepoList from './components/Repolister'
+import SearchField from './components/searchField'
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -27,7 +27,7 @@ function App() {
 					<Grid item xs={12}>
 						<Paper className={classes.paper}>
 							<p>Search for a Git user: (Example: 'freeCodeCamp')</p>
-							<GitSearcher />
+							<SearchField />
 						</Paper>
 					</Grid>
 					<Grid item xs={12} sm={6}>

@@ -26,13 +26,13 @@ const useStyles = makeStyles(theme => ({
   }));
 
 
-let searchButton = ({ searchUserData }) => {
+let searchButton = ({ searchUserData, searchString }) => {
 
 	const classes = new useStyles()
-
+	
 	return (
 		<div>
-			<Button variant="contained" color="primary" className={classes.button} onClick={ () => searchUserData('dotslashbin') }>Search</Button>
+			<Button variant="contained" color="primary" className={classes.button} onClick={ () => searchUserData(searchString) }>Search</Button>
 		</div>
 	)
 }
