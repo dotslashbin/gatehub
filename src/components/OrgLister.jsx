@@ -31,6 +31,10 @@ const useStyles = makeStyles({
 	}
   });
 
+/**
+ * Creates a compoent that lists organizations 
+ * @param {orgs, loading} params
+ */
 let OrgList = ({orgs, loading}) => {
 
 	const classes = new useStyles()
@@ -58,6 +62,10 @@ let OrgList = ({orgs, loading}) => {
 	)
 }
 
+/**
+ * Maps the current state to the components props
+ * @param {state} state 
+ */
 const mapStateToProps = (state) => ({
 	orgs: state.orgs,
 	loading: state.loading

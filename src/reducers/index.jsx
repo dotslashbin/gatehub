@@ -1,3 +1,4 @@
+/** Imports */
 import { API_ERRORS, DISPLAY_ORGS, DISPLAY_REPOS, SEARCH } from '../common/actionTypes'
 
 const initialState = {}

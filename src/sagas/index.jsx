@@ -1,7 +1,12 @@
+/** Imports */
 import { all, put , takeEvery } from 'redux-saga/effects';
 import { profileFunctions } from '../modules/profiles'
 import { API_ERRORS, DISPLAY_ORGS, DISPLAY_REPOS, SEARCH } from '../common/actionTypes'
 
+/**
+ * Executes the proces of calling for API calls
+ * @param {*} action 
+ */
 function* makeAPICall(action) {
 	try {
 		const repos = yield profileFunctions.getUserRepos(action.payload.userid)
@@ -19,10 +24,16 @@ function* makeAPICall(action) {
 	}
 }
 
+/**
+ * Main action listener
+ */
 function* actionWatcher() {
 	yield takeEvery(SEARCH, makeAPICall)
 }
 
+/**
+ * Root saga 
+ */
 export default function* rootSaga() {
 	yield all([
 		actionWatcher()

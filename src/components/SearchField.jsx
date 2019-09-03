@@ -15,6 +15,10 @@ const useStyles = makeStyles(theme => ({
 	},
   }));
 
+/**
+ * Creates a component that is basically a text field. 
+ * It saves all its input into a state variable to be passed on to the child component SearchButton
+ */
 export default function SearchField() {
 	const classes = useStyles()
 
