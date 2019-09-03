@@ -14,5 +14,18 @@ export const profileFunctions = {
 			.catch((error) => {
 				console.error(`THERE WAS AN ERROR CALLING API FOR REPOS`, error)
 			})
+	}, 
+	getUserOrgs: (userid) => {
+		return axios.get(`${API_URL}${userid}/orgs`)
+			.then((result) => {
+				if (result.data) {
+					return result.data
+				}
+				
+				return []
+			})
+			.catch((error) => {
+				console.error(`THERE WAS AN ERROR CALLING API FOR ORGS`, error)
+			})
 	}
 }
