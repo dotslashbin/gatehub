@@ -1,5 +1,7 @@
 ## Gatehub
-This project was created for demo purposes only. It is a ReactJS based application that display's a github user's repositories and organizations
+This project was created for demo purposes only. It is a ReactJS based application that display's a github user's repositories and organizations.<br />
+
+You can find this running here https://gatehub.herokuapp.com
 
 ## What I used here
 ReactJs - base
