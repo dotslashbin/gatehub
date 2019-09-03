@@ -1,3 +1,4 @@
+/** Imports  */
 import React from 'react'
 import { configure, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -14,12 +15,16 @@ import OrgList from './components/OrgLister'
 import SearchField from './components/SearchField'
 import SearchButton from './components/SearchButton'
 
+/** Initializes the mock store for testing */
 const mockStore = configureStore()
 
 let store = beforeEach(() => {
 	store = mockStore({})
 })
 
+/**
+ * This checks to see if the app renders correctly
+ */
 it("renders correctly", () => {
 	const wrapper = shallow(
 		<App />
@@ -27,6 +32,9 @@ it("renders correctly", () => {
 	expect(wrapper).toMatchSnapshot();
 })
 
+/**
+ * This checks to see if the repos can be rendered
+ */
 it('renders repos', () => {
 	const items = [
 		{
@@ -48,6 +56,9 @@ it('renders repos', () => {
 	expect(wrapper.find('Card')).toBeDefined()
 })
 
+/**
+ * This checks to see if the orgs can be rendered
+ */
 it ('renders orgs', () => {
 	const items = [
 		{
@@ -65,10 +76,16 @@ it ('renders orgs', () => {
 	expect(wrapper.find('Card')).toBeDefined()	
 })
 
+/**
+ * This checks to see if the SearchField component integratse SearchButton
+ */
 it ('SearchField includes the SearchButton', () => {
 	const wrapper = shallow(<SearchField store={store}/>).find('SearchButton')
 })
 
+/**
+ * This Checks to tsee if the SearchButton component integrates button
+ */
 it ('SearchButton has Button', () => {
 	const wrapper = shallow(<SearchButton store={store} />).find('Button')
 })

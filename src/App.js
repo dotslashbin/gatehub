@@ -1,14 +1,16 @@
+/**Imports */
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import * as serviceWorker from './serviceWorker'
 
-/** COMPONENTS */
+/** Components */
 import RepoList from './components/Repolister'
 import OrgList from './components/OrgLister'
 import SearchField from './components/SearchField'
 
+/** Styles for the main app */
 const useStyles = makeStyles(theme => ({
 	root: {
 		flexGrow: 1,

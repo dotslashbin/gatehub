@@ -31,6 +31,10 @@ const useStyles = makeStyles({
 	}
   });
 
+/**
+ * Returns a component that lists repositories
+ * @param {repos, loading} param0 
+ */
 let RepoList = ({repos, loading}) => {
 
 	const classes = new useStyles()
@@ -61,6 +65,10 @@ let RepoList = ({repos, loading}) => {
 	)
 }
 
+/**
+ * This maps the state into the components props
+ * @param {state} state 
+ */
 const mapStateToProps = (state) => ({
 	repos: state.repos,
 	loading: state.loading

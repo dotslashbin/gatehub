@@ -25,7 +25,11 @@ const useStyles = makeStyles(theme => ({
 	  },
   }));
 
-
+/**
+ * Returns a component that has a  button that triggers the search
+ * @param {searchUserdata} param0 Method
+ * @param {saerchString} param1 String to be searched, taken from the Search Field component
+ */
 let searchButton = ({ searchUserData, searchString }) => {
 
 	const classes = new useStyles()
