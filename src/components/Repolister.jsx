@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 	}
   });
 
-let RepoList = ({repos}) => {
+let RepoList = ({repos, loading}) => {
 
 	const classes = new useStyles()
 
@@ -55,15 +55,15 @@ let RepoList = ({repos}) => {
 						<Link href={repo.html_url}>go to repo</Link>
 					</CardActions>
 				</Card>
-
 			)}
 		</div> :
-		<p>Click search to show repos</p>
+		loading? 'loading ...' : <p>There are no records ..</p>
 	)
 }
 
 const mapStateToProps = (state) => ({
-	repos: state.repos
+	repos: state.repos,
+	loading: state.loading
 })
 
 RepoList = connect(mapStateToProps,null)(RepoList)
